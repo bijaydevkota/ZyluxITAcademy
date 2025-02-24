@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 
 export default function Testomonial() {
@@ -90,7 +91,7 @@ export default function Testomonial() {
                     </div>
 
                     <div className="flex items-center mt-8">
-                      <img
+                      <Image
                         className="flex-shrink-0 object-cover rounded-full w-11 h-11"
                         src="https://cdn.rareblocks.xyz/collection/clarity/images/testimonial/4/avatar-male-1.png"
                         alt=""
@@ -163,7 +164,7 @@ export default function Testomonial() {
                     </div>
 
                     <div className="flex items-center mt-8">
-                      <img
+                      <Image
                         className="flex-shrink-0 object-cover rounded-full w-11 h-11"
                         src="https://cdn.rareblocks.xyz/collection/clarity/images/testimonial/4/avatar-male-2.png"
                         alt=""
@@ -236,7 +237,7 @@ export default function Testomonial() {
                     </div>
 
                     <div className="flex items-center mt-8">
-                      <img
+                      <Image
                         className="flex-shrink-0 object-cover rounded-full w-11 h-11"
                         src="https://cdn.rareblocks.xyz/collection/clarity/images/testimonial/4/avatar-female.png"
                         alt=""
