@@ -1,4 +1,5 @@
 import { CheckCircle } from "lucide-react"
+import Link from "next/link"
 
 export default function FullStackCoursePage() {
   const sections = [
@@ -79,7 +80,7 @@ export default function FullStackCoursePage() {
           ))}
         </div>
         <div className="mt-12 text-center">
-          <a className="bg-[#33c6f2] px-6 py-4 rounded-md">Enroll Now</a>
+          <Link href={"/Pages/enroll"} className="bg-[#33c6f2] px-6 py-4 rounded-md">Enroll Now</Link>
         </div>
       </div>
     </div>

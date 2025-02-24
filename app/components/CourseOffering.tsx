@@ -9,19 +9,19 @@ const courses = [
     title: "Frontend Development",
     description: "Master modern frontend technologies including React and Next.js",
     icon: Globe,
-    href: "/frontend-course",
+    href: "/Pages/frontend-course",
   },
   {
     title: "Backend Development",
     description: "Build robust server-side applications with Node.js and Express",
     icon: Server,
-    href: "/backend-course",
+    href: "/Pages/backend-course",
   },
   {
     title: "Full Stack Development",
     description: "Become a full stack developer with our comprehensive Next.js course",
     icon: Code,
-    href: "/fullstack-course",
+    href: "/Pages/fullstack-course",
   },
 ]
 

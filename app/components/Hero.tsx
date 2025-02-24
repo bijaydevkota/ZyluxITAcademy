@@ -1,6 +1,7 @@
 "use client"
 import { motion } from "framer-motion"
 import Image from "next/image"
+import Link from "next/link"
 
 const Hero = () => {
   return (
@@ -20,13 +21,14 @@ const Hero = () => {
           Unlock your potential in the world of technology with our cutting-edge courses in frontend and backend
           development.
         </p>
+        <Link href={"/Pages/enroll"}>
         <motion.button
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
           className="bg-[#33c6f2] text-white px-8 py-3 rounded-full text-lg font-semibold hover:bg-[#33c6f2]/90 transition-colors"
         >
-          Explore Courses
-        </motion.button>
+          Enroll Now
+        </motion.button></Link>
       </motion.div>
     </section>
   )
