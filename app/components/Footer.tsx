@@ -1,8 +1,31 @@
 "use client"
 import { motion } from "framer-motion"
-import { Facebook, Twitter, Instagram, Linkedin } from "lucide-react"
+import { Facebook, InstagramIcon, Mail} from "lucide-react"
+
 
 const Footer = () => {
+
+
+  const icons=[
+    {
+      icon:<Facebook/>,
+      href:"https://www.facebook.com/zyluxitacademy",
+      target:"_blank"
+    },
+
+    {
+      icon:<InstagramIcon/>,
+      href:"https://www.instagram.com/zyluxitacademy/"
+      
+    },
+
+
+    {
+      icon:<Mail/>,
+      href:"#"
+ 
+    },
+  ]
   return (
     <footer id="footer" className="bg-gray-900 text-white py-8">
       <div className="container mx-auto px-6">
@@ -41,9 +64,9 @@ const Footer = () => {
           >
             <h4 className="text-lg font-semibold mb-4">Connect With Us</h4>
             <div className="flex space-x-4">
-              {[Facebook, Twitter, Instagram, Linkedin].map((Icon, index) => (
-                <a key={index} href="#" className="hover:text-[#33c6f2] transition-colors">
-                  <Icon size={24} />
+              {icons.map((item, index) => (
+                <a key={index} href={item.href} className="hover:text-[#33c6f2] transition-colors">
+                 {item.icon}
                 </a>
               ))}
             </div>
