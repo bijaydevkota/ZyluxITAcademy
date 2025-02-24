@@ -17,12 +17,12 @@ const About = () => {
                 is a trusted name in the construction industry. Known for its
                 unwavering commitment to quality and innovation, the company
                 specializes in creating durable, aesthetically pleasing, and
-                sustainable structures. Whether it's residential, commercial, or
+                sustainable structures. Whether it&apos;s residential, commercial, or
                 industrial projects, Awal & Sons Construction combines advanced
                 technology with expert craftsmanship to deliver results that
                 exceed client expectations. Each project is handled with a keen
                 focus on detail, ensuring it meets modern standards while
-                staying true to the client’s vision.
+                staying true to the client&apos;s vision.
               </p>
               <br />
               <p className="font-serif">

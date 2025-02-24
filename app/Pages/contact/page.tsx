@@ -14,7 +14,7 @@ export default function Contact() {
 
             <p className=" text-[18px]">
               Whether you have a project in mind or just want to ask us a
-              question, we're here to help. Reach out to
+              question, we&apos;re here to help. Reach out to
               <strong className=" px-1">Zylux IT Academy.</strong>
             </p>
           </div>

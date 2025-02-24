@@ -6,7 +6,7 @@ import React, { useState } from 'react';
 export default function Page() {
   const [enrolled, setEnrolled] = useState(false);
 
-  const handleSubmit = (e : any) => {
+  const handleSubmit = (e : React.FormEvent<HTMLFormElement>) => {
     e.preventDefault(); // Prevents page reload
     setEnrolled(true); // Show the success message
   };
