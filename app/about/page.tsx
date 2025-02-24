@@ -4,7 +4,7 @@ import React from "react";
 const About = () => {
   return (
     <>
-      <div className="container pt-14 p-8">
+      <div className="container pt-14 p-8 bg-[#202938] text-white h-[100vh]">
         <div className="py-5 md:py-10">
           <h1 className="my-8 border-l-4 border-[#33c6f2] py-2 pl-2 md:text-3xl text-2xl font-bold font-serif">
             About us

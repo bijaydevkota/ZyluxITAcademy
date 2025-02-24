@@ -5,6 +5,24 @@ import { Facebook, InstagramIcon, Mail} from "lucide-react"
 
 const Footer = () => {
 
+  const links =[
+    {
+      links : "Home",
+      href : "#"
+    },
+    {
+      links : "Courses",
+      href : "/fullstack-course"
+    },
+    {
+      links : "About",
+      href : "/about"
+    },
+    {
+      links : "Contact",
+      href : "/contact"
+    },
+  ]
 
   const icons=[
     {
@@ -47,10 +65,10 @@ const Footer = () => {
           >
             <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
             <ul className="space-y-2">
-              {["Home", "Courses", "About", "Contact"].map((item) => (
-                <li key={item}>
-                  <a href="#" className="hover:text-[#33c6f2] transition-colors">
-                    {item}
+              {links.map((item,index) => (
+                <li key={index}>
+                  <a href={item.href} className="hover:text-[#33c6f2] transition-colors">
+                    {item.links}
                   </a>
                 </li>
               ))}

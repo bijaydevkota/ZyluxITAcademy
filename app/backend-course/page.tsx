@@ -45,7 +45,7 @@ export default function BackendCoursePage() {
   ]
 
   return (
-    <div className="min-h-screen py-12 px-4 sm:px-6 lg:px-8 bg-black">
+    <div className="min-h-screen py-12 px-4 sm:px-6 lg:px-8 bg-black text-white">
       <div className="max-w-7xl mx-auto">
         <h1 className="text-4xl font-bold text-center mb-12 mt-24">
           Backend Development <span className="text-[#33c6f2]">Mastery Course</span>
