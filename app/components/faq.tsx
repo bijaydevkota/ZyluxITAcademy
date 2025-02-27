@@ -4,11 +4,13 @@ import {
     AccordionItem,
     AccordionTrigger,
   } from "@/components/ui/accordion"
+
   
   export function AccordionDemo() {
     return (
 
-      <Accordion type="single" collapsible className="w-11/12 mx-auto mt-8 mb-8">
+      <div className="p-4 text-[#33c6f2]">
+        <Accordion type="single" collapsible className="w-11/12 mx-auto mt-8 mb-8">
         <p className="flex justify-center">FaQs</p>
         <AccordionItem value="item-1">
           <AccordionTrigger>Is it accessible?</AccordionTrigger>
@@ -30,6 +32,7 @@ import {
           </AccordionContent>
         </AccordionItem>
       </Accordion>
+      </div>
     )
   }
   

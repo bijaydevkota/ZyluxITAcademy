@@ -7,7 +7,7 @@ const inter = Inter({ subsets: ["latin"] })
 
 export const metadata = {
   title: "Zylux IT Academy",
-  description: "Learn frontend and backend development with Next.js",
+  description: "A Perfect Destination for quality education",
 }
 
 export default function RootLayout({

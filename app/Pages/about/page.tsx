@@ -1,53 +1,70 @@
 
-import React from "react";
+import { Card, CardContent } from "@/components/ui/card"
 
-const About = () => {
+import { Badge } from "@/components/ui/badge"
+import {  Users, Lightbulb,  CheckCircle, ArrowRight } from "lucide-react"
+import Image from "next/image"
+import Link from "next/link"
+
+export default function AboutPage() {
   return (
-    <>
-      <div className="container pt-14 p-8 bg-[#202938] text-white h-[100vh]">
-        <div className="py-5 md:py-10">
-          <h1 className="my-8 border-l-4 border-[#33c6f2] py-2 pl-2 md:text-3xl text-2xl font-bold font-serif">
-            About us
-          </h1>
-          <div className="md:flex justify-center items-center gap-10">
-            <div className="md:flex-1">
-              <p className="font-serif">
-                <strong>Zylux IT Academy</strong>, located in the heart
-                of <strong className="px-1">Shantinagar, New Baneshwor</strong>{" "}
-                is a trusted name in the construction industry. Known for its
-                unwavering commitment to quality and innovation, the company
-                specializes in creating durable, aesthetically pleasing, and
-                sustainable structures. Whether it&apos;s residential, commercial, or
-                industrial projects, Awal & Sons Construction combines advanced
-                technology with expert craftsmanship to deliver results that
-                exceed client expectations. Each project is handled with a keen
-                focus on detail, ensuring it meets modern standards while
-                staying true to the client&apos;s vision.
+    <div className="flex flex-col min-h-screen bg-gray-100">
+      {/* Hero Section */}
+      <section className="relative w-full py-12 md:py-24 lg:py-32  text-[#33c6f2] overflow-hidden">
+        <div className="absolute inset-0 opacity-20">
+          <div className="absolute top-0 left-0 w-full h-full bg-[url('/placeholder.svg?height=800&width=1600')] bg-no-repeat bg-cover"></div>
+        </div>
+        <div className="container px-4 md:px-6 relative z-10">
+          <div className="flex flex-col items-center text-center space-y-4">
+            <Badge className="px-3 py-1 text-sm bg-[#33c6f2] text-white " variant="outline">
+              Empowering Tech Innovators Since 2023
+            </Badge>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tighter">
+              About <span className="text-primary">Zylux</span> IT Academy
+            </h1>
+            <p className="max-w-[700px] text-muted-foreground text-lg md:text-xl">
+              Where technology meets education to create the next generation of digital pioneers
+            </p>
+          </div>
+        </div>
+        <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-background to-transparent"></div>
+      </section>
+
+      {/* Mission Section */}
+      <section className="w-full py-12 md:py-24">
+        <div className="container px-4 md:px-6">
+          <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 items-center">
+            <div className="space-y-4">
+              <div className="inline-block rounded-lg bg-[#33c6f2] text-white px-3 py-1 text-sm text-primary">Our Mission</div>
+              <h2 className="text-3xl font-bold tracking-tighter md:text-4xl text-[#33c6f2]">Transforming Tech Education</h2>
+              <p className="text-muted-foreground md:text-xl">
+                At Zylux IT Academy, we believe in a hands-on approach to learning technology. Our mission is to bridge
+                the gap between theoretical knowledge and practical industry requirements, creating professionals who
+                are ready to innovate from day one.
               </p>
-              <br />
-              <p className="font-serif">
-                With years of experience since its establishment in{" "}
-                <strong>2080</strong> B.S.,
-                <strong className="px-1">Zylux IT Academy</strong> has
-                established itself as a cornerstone in the construction sector.
-                The company prides itself on its dedication to customer
-                satisfaction, timely delivery, and adherence to budget
-                constraints. Awal & Sons Construction not only builds structures
-                but also builds relationships, fostering trust and long-term
-                partnerships with its clients. Through innovative solutions and
-                ethical practices, the company continues to contribute to the
-                development of Bhaktapur and beyond.
-              </p>
+              <div className="flex flex-col sm:flex-row gap-3">
+                
+                  <Link href="/Pages/courses" className="bg-[#33c6f2] text-white px-4 py-2 flex rounded-full">
+                    Explore Our Programs <ArrowRight className="ml-2 h-4 w-4" />
+                  </Link>
+                
+                  <Link href="/Pages/contact"  className="bg-[#33c6f2] text-white px-4 py-2 rounded-full">Get in Touch</Link>
+                
+              </div>
             </div>
-            <div className="md:pt-0 pt-10 md:flex-1">
-              
+            <div className="relative aspect-video overflow-hidden rounded-xl">
+              <Image
+                src="/class2.jpg"
+                alt="Students collaborating on a tech project"
+                fill
+                className="object-cover"
+              />
             </div>
           </div>
         </div>
-      </div>
+      </section>
 
-    </>
-  );
-};
+    </div>
+  )
+}
 
-export default About;

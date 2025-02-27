@@ -16,7 +16,7 @@ export default function Page() {
       <div className="bg-gray-900 shadow-2xl rounded-2xl p-8 max-w-lg w-full">
         {!enrolled ? (
           <>
-            <h1 className="text-3xl font-bold text-center mb-6">Enroll Now</h1>
+            <h1 className="text-3xl font-bold text-center mb-6 text-white">Enroll Now</h1>
             <form className="space-y-4" onSubmit={handleSubmit}>
               <div>
                 <label className="block text-sm font-medium text-gray-700">

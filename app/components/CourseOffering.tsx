@@ -27,9 +27,9 @@ const courses = [
 
 const CourseOfferings = () => {
   return (
-    <section id="course" className="py-20 bg-gray-800">
+    <section id="course" className="py-20 bg-white text-[#33c6f2]">
       <div className="container mx-auto px-6">
-        <h2 className="text-4xl font-bold text-center mb-12 text-white">Our Courses</h2>
+        <h2 className="text-4xl font-bold text-center mb-12 ">Our Courses</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {courses.map((course, index) => (
             <Link href={course.href} key={course.title}>
@@ -37,11 +37,11 @@ const CourseOfferings = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.2 }}
-                className="bg-gray-700 rounded-lg p-6 hover:shadow-lg transition-shadow h-full"
+                className="bg-[#33c6f2] rounded-lg p-6 hover:shadow-lg transition-shadow h-full"
               >
-                <course.icon className="w-12 h-12 text-[#33c6f2] mb-4" />
+                <course.icon className="w-12 h-12 text-white mb-4" />
                 <h3 className="text-2xl font-semibold mb-2 text-white">{course.title}</h3>
-                <p className="text-gray-300">{course.description}</p>
+                <p className="text-gray-200">{course.description}</p>
               </motion.div>
             </Link>
           ))}

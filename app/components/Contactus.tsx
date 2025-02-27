@@ -22,7 +22,8 @@ export default function ContactForm() {
   };
 
   return (
-    <div className="max-w-lg mx-auto p-6 bg-gray-800 rounded-2xl shadow-lg mt-24 mb-16">
+   <div className="bg-gray-50 p-4 shadow-2xl">
+     <div className="max-w-lg mx-auto p-6 bg-gray-100 text-[#33c6f2] rounded-2xl shadow-lg mt-24 mb-16">
       <h2 className="text-2xl font-bold mb-4 flex justify-center">Contact Us</h2>
       {submitted && (
         <p className="text-[#33c6f2]">Thank you for reaching out! We&apos;ll get back to you soon.</p>
@@ -68,5 +69,6 @@ export default function ContactForm() {
         </button>
       </form>
     </div>
+   </div>
   );
 }

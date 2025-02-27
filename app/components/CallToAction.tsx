@@ -1,5 +1,6 @@
 "use client"
 import { motion } from "framer-motion"
+import Link from "next/link"
 
 const CallToAction = () => {
   return (
@@ -21,13 +22,15 @@ const CallToAction = () => {
         >
           Join Zylux IT Academy today and transform your career in technology.
         </motion.p>
+        <Link href={"/Pages/enroll"}>
         <motion.button
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
-          className="bg-gray-900 text-white px-8 py-3 rounded-full text-lg font-semibold transition-colors"
+          className="bg-white text-[#33c6f2] px-8 py-3 rounded-full text-lg font-semibold transition-colors"
         >
           Enroll Now
         </motion.button>
+        </Link>
       </div>
     </section>
   )

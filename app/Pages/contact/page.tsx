@@ -2,11 +2,11 @@
 
 export default function Contact() {
   return (
-    <div className="bg-[#202938] text-white md:px-0 px-4  md:py-36 py-28 flex justify-center items-center ">
-      <main className=" flex flex-col gap-10 md:w-10/12 w-full border border-gray-800 shadow-2xl p-4">
+    <div className="bg-gray-100 text-[#33c6f2] md:px-0 px-4  md:py-36 py-28 flex justify-center items-center ">
+      <main className=" flex flex-col gap-10 md:w-10/12 w-full  shadow-2xl p-4">
         <div className=" flex flex-col justify-center">
-          <div className="md:max-w-4xl space-y-6 mt-14">
-            <h3 className="  text-white md:text-2xl text-xl font-semibold font-serif cursor-pointer">
+          <div className="md:max-w-4xl space-y-6 mt-4">
+            <h3 className="  text-black md:text-2xl text-xl font-semibold font-serif cursor-pointer">
               Contact{" "}
               <span className=" text-[#33c6f2] font-bold"> Zylux IT Academy</span>
         
