@@ -10,7 +10,7 @@ export default function Header() {
     ">
       <div className="container mx-auto px-4 flex items-center justify-between">
         <Link href={"/"} className="flex items-center gap-2">
-          <Image src="/logo1.png" alt="Logo" height={50} width={50}/>        
+          <Image src="/logo.png" alt="Logo" height={60} width={60}/>        
           </Link>
 
         <nav className="hidden md:flex items-center space-x-8 text-[#33c6f2]">

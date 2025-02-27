@@ -12,11 +12,11 @@ export default function Page() {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-800">
-      <div className="bg-gray-900 shadow-2xl rounded-2xl p-8 max-w-lg w-full">
+    <div className="min-h-screen flex items-center justify-center bg-white">
+      <div className="bg-gray-100 shadow-2xl rounded-2xl p-8 max-w-lg w-full mx-auto mt-8">
         {!enrolled ? (
           <>
-            <h1 className="text-3xl font-bold text-center mb-6 text-white">Enroll Now</h1>
+            <h1 className="text-3xl font-bold text-center mb-6 text-[#33c6f2]">Enroll Now</h1>
             <form className="space-y-4" onSubmit={handleSubmit}>
               <div>
                 <label className="block text-sm font-medium text-gray-700">

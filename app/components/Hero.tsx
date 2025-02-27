@@ -10,11 +10,15 @@ export default function ProcessSection() {
         <div className="grid md:grid-cols-2 gap-8 items-center">
           {/* Process Steps */}
           <div className="space-y-6">
+            {/* Typing Animation for Heading */}
             <motion.p
-              initial={{ opacity: 0, y: 50 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, ease: "easeOut" }}
-              className="text-5xl text-[#33c6f2] font-bold"
+              initial={{ opacity: 0, width: 0 }}
+              animate={{
+                opacity: 1,
+                width: "auto",
+              }}
+              transition={{ duration: 2, ease: "easeInOut" }}
+              className="text-5xl text-[#33c6f2] font-bold whitespace-nowrap overflow-hidden"
             >
               Empowering Future{" "}
               <motion.span
@@ -27,19 +31,21 @@ export default function ProcessSection() {
               </motion.span>
             </motion.p>
 
+            {/* Fade-in Subtext */}
             <motion.p
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1, delay: 0.5 }}
+              transition={{ duration: 1, delay: 0.7 }}
               className="text-xl"
             >
               Learn MERN Stack & Build Your Career!
             </motion.p>
 
+            {/* Bounce Animation on Apply Now Button */}
             <motion.div
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.5, delay: 0.7 }}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 1, delay: 1.2 }}
             >
               <Link
                 href={"/Pages/enroll"}

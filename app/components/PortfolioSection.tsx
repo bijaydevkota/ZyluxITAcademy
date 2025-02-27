@@ -1,6 +1,5 @@
 import Image from "next/image"
-import Link from "next/link"
-import { ChevronLeft, ChevronRight, Presentation, Eye } from "lucide-react"
+import { ChevronLeft, ChevronRight, Presentation } from "lucide-react"
 
 export default function PortfolioSection() {
   const projects = [
