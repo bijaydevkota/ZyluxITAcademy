@@ -2,54 +2,51 @@
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import { useState, useEffect } from "react";
 
 export default function ProcessSection() {
+  const text = "Empowering Future Developers";
+  const [displayedText, setDisplayedText] = useState("");
+  const [typingIndex, setTypingIndex] = useState(0);
+
+  useEffect(() => {
+    if (typingIndex < text.length) {
+      const timeout = setTimeout(() => {
+        setDisplayedText((prev) => prev + text[typingIndex]);
+        setTypingIndex(typingIndex + 1);
+      }, 100); // Adjust speed of typing here
+      return () => clearTimeout(timeout);
+    }
+  }, [typingIndex]);
+
   return (
     <section className="bg-white py-8">
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-2 gap-8 items-center">
           {/* Process Steps */}
           <div className="space-y-6">
-            {/* Typing Animation for Heading */}
-            <motion.p
-              initial={{ opacity: 0, width: 0 }}
-              animate={{
-                opacity: 1,
-                width: "auto",
-              }}
-              transition={{ duration: 2, ease: "easeInOut" }}
-              className="text-5xl text-[#33c6f2] font-bold whitespace-nowrap overflow-hidden"
-            >
-              Empowering Future{" "}
-              <motion.span
-                initial={{ opacity: 0, x: -30 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 1, delay: 0.3 }}
-                className="inline-block"
-              >
-                Developers
-              </motion.span>
-            </motion.p>
+            <p className="text-5xl text-[#33c6f2] font-bold">
+              {displayedText}
+              <span className="animate-blink">|</span>
+            </p>
 
-            {/* Fade-in Subtext */}
             <motion.p
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1, delay: 0.7 }}
+              transition={{ duration: 1, delay: 1.5 }}
               className="text-xl"
             >
               Learn MERN Stack & Build Your Career!
             </motion.p>
 
-            {/* Bounce Animation on Apply Now Button */}
             <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 1, delay: 1.2 }}
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.5, delay: 2 }}
             >
               <Link
                 href={"/Pages/enroll"}
-                className="bg-[#33c6f2] text-white px-4 py-2 rounded-full inline-block transition-transform hover:scale-110"
+                className="bg-[#33c6f2] text-white px-4 py-2 rounded-full inline-block transition-transform hover:scale-110 hover:translate-y-1"
               >
                 Apply Now
               </Link>
@@ -78,6 +75,17 @@ export default function ProcessSection() {
         </div>
       </div>
       <hr />
+      <style jsx>{`
+        .animate-blink {
+          display: inline-block;
+          animation: blink 0.8s infinite;
+        }
+        @keyframes blink {
+          0% { opacity: 1; }
+          50% { opacity: 0; }
+          100% { opacity: 1; }
+        }
+      `}</style>
     </section>
   );
 }
