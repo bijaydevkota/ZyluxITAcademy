@@ -4,8 +4,8 @@ import { CheckCircle, Lightbulb, Users } from 'lucide-react'
 export default function Values() {
   return (
     <div>
-         <section className="w-full py-12 md:py-24 bg-muted">
-        <div className="container px-4 md:px-6">
+         <section className="w-full  py-12 md:py-24 bg-muted">
+        <div className="containerw-11/12 mx-auto px-4 md:px-6">
           <div className="flex flex-col items-center justify-center space-y-4 text-center">
             <div className="space-y-2">
               <div className="inline-block rounded-lg bg-[#33c6f2]  px-3 py-1 text-sm text-white">

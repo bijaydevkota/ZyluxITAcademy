@@ -1,23 +1,53 @@
-import Image from "next/image"
-import Link from "next/link"
+"use client";
+import Image from "next/image";
+import Link from "next/link";
+import { motion } from "framer-motion";
 
 export default function ProcessSection() {
-
   return (
-    <section className=" bg-white py-12">
+    <section className="bg-white py-8">
       <div className="container mx-auto px-4">
-        {/* <div className="flex flex-col items-center text-center mb-12">
-          
-          <p className="text-[#33c6f2] text-sm tracking-wider uppercase mb-2">Welcome To</p>
-          <h2 className="text-3xl md:text-4xl font-bold text-[#33c6f2]">Zylux IT Academy</h2>
-        </div> */}
-
         <div className="grid md:grid-cols-2 gap-8 items-center">
           {/* Process Steps */}
-          <div className="space-y-8">
-           <p className="text-5xl text-[#33c6f2]">Empowering Future <span className="flex">Developers</span></p> 
-           <p className="text-xl">Learn MERN Stack & Build Your Career!</p> 
-           <div><Link href={"/Pages/enroll"} className="bg-[#33c6f2] text-white px-4 py-2 rounded-full">Apply Now</Link></div>
+          <div className="space-y-6">
+            <motion.p
+              initial={{ opacity: 0, y: 50 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+              className="text-5xl text-[#33c6f2] font-bold"
+            >
+              Empowering Future{" "}
+              <motion.span
+                initial={{ opacity: 0, x: -30 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 1, delay: 0.3 }}
+                className="inline-block"
+              >
+                Developers
+              </motion.span>
+            </motion.p>
+
+            <motion.p
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1, delay: 0.5 }}
+              className="text-xl"
+            >
+              Learn MERN Stack & Build Your Career!
+            </motion.p>
+
+            <motion.div
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.5, delay: 0.7 }}
+            >
+              <Link
+                href={"/Pages/enroll"}
+                className="bg-[#33c6f2] text-white px-4 py-2 rounded-full inline-block transition-transform hover:scale-110"
+              >
+                Apply Now
+              </Link>
+            </motion.div>
           </div>
 
           {/* Image Section */}
@@ -31,7 +61,7 @@ export default function ProcessSection() {
             {/* Main Image */}
             <div className="relative rounded-lg overflow-hidden">
               <Image
-                src="/about.jpg"
+                src="/hero3.svg"
                 alt="Team collaboration"
                 width={500}
                 height={600}
@@ -43,6 +73,5 @@ export default function ProcessSection() {
       </div>
       <hr />
     </section>
-  )
+  );
 }
-

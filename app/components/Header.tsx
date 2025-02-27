@@ -1,5 +1,6 @@
 import Link from "next/link"
-import { ChevronDown } from "lucide-react"
+import Image from "next/image"
+
 
 export default function Header() {
   return (
@@ -8,11 +9,9 @@ export default function Header() {
     <header className="w-full py-4 bg-gray-50
     ">
       <div className="container mx-auto px-4 flex items-center justify-between">
-        <div className="flex items-center gap-2">
-          <div className="font-bold text-xl">
-            <span className="text-[#33c6f2]">Zylux</span> IT Academy
-          </div>
-        </div>
+        <Link href={"/"} className="flex items-center gap-2">
+          <Image src="/logo1.png" alt="Logo" height={50} width={50}/>        
+          </Link>
 
         <nav className="hidden md:flex items-center space-x-8 text-[#33c6f2]">
           <Link href="/" className=" font-medium ">
