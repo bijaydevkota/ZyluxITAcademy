@@ -1,8 +1,6 @@
 "use client"
 import Hero from "./components/Hero"
 import CourseOfferings from "./components/CourseOffering"
-import CallToAction from "./components/CallToAction"
-import Footer from "./components/Footer"
 import ContactForm from "./components/Contactus"
 import { AccordionDemo } from "./components/faq"
 import Testomonial from "./components/testomonial"
@@ -13,7 +11,7 @@ import Values from "./components/Values"
 
 export default function Home() {
   return (
-    <main className="min-h-screen ">
+    <main className="min-h-screen">
       <Hero />
       <CourseOfferings />
       <PortfolioSection/>
@@ -22,8 +20,6 @@ export default function Home() {
       <AccordionDemo/>
       <Testomonial/>
       <ContactForm/>
-      
-      
     </main>
   )
 }

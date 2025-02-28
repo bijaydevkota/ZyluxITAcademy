@@ -1,19 +1,23 @@
 "use client"
 
 import Image from "next/image"
-import { ChevronLeft, ChevronRight, Presentation } from "lucide-react"
+import { Presentation } from "lucide-react"
 import { motion, useAnimation, type PanInfo } from "framer-motion"
 import { useRef, useState, useEffect } from "react"
 
 export default function PortfolioSection() {
   const projects = [
-    { id: 1, image: "/class1.jpg", title: "Project 1" },
-    { id: 2, image: "/class1.jpg", title: "Project 2" },
-    { id: 3, image: "/class1.jpg", title: "Project 3" },
-    { id: 4, image: "/class2.jpg", title: "Project 4" },
-    { id: 5, image: "/class3.jpg", title: "Project 5" },
-    { id: 6, image: "/class1.jpg", title: "Project 6" },
-    { id: 7, image: "/class2.jpg", title: "Project 7" },
+    { id: 1, image: "/class1.jpg" },
+    { id: 2, image: "/class1.jpg" },
+    { id: 3, image: "/class1.jpg" },
+    { id: 4, image: "/class2.jpg" },
+    { id: 5, image: "/class3.jpg" },
+    { id: 6, image: "/class1.jpg" },
+    { id: 7, image: "/class2.jpg" },
+    { id: 8, image: "/class2.jpg" },
+    { id: 9, image: "/class3.jpg" },
+    { id: 10, image: "/class1.jpg" },
+    { id: 11, image: "/class2.jpg" },
   ]
 
   const [currentIndex, setCurrentIndex] = useState(0)
@@ -32,36 +36,25 @@ export default function PortfolioSection() {
     return () => window.removeEventListener("resize", updateWidth)
   }, [])
 
-  const itemWidth = Math.min(260, containerWidth - 32) // 32px for padding
-  const itemsPerView = Math.floor(containerWidth / itemWidth)
+  // Calculate item width based on container width and desired items per view
+  const itemsPerView = Math.floor(containerWidth / 300) || 1 // Show 1 item if container is too small
+  const itemWidth = containerWidth / itemsPerView
   const maxIndex = Math.max(0, projects.length - itemsPerView)
 
   const handleDragEnd = (event: MouseEvent | TouchEvent | PointerEvent, info: PanInfo) => {
     const swipeThreshold = 50
     if (info.offset.x < -swipeThreshold && currentIndex < maxIndex) {
-      handleNext()
+      setCurrentIndex((prev) => Math.min(prev + 1, maxIndex))
     } else if (info.offset.x > swipeThreshold && currentIndex > 0) {
-      handlePrev()
+      setCurrentIndex((prev) => Math.max(prev - 1, 0))
     } else {
       // Snap back to current position
       controls.start({ x: -currentIndex * itemWidth })
     }
   }
 
-  const handleNext = () => {
-    if (currentIndex < maxIndex) {
-      const nextIndex = Math.min(currentIndex + 1, maxIndex)
-      setCurrentIndex(nextIndex)
-      controls.start({ x: -nextIndex * itemWidth })
-    }
-  }
-
-  const handlePrev = () => {
-    if (currentIndex > 0) {
-      const prevIndex = Math.max(currentIndex - 1, 0)
-      setCurrentIndex(prevIndex)
-      controls.start({ x: -prevIndex * itemWidth })
-    }
+  const handleDotClick = (index: number) => {
+    setCurrentIndex(index)
   }
 
   useEffect(() => {
@@ -82,7 +75,7 @@ export default function PortfolioSection() {
 
         <div className="relative" ref={containerRef}>
           <motion.div
-            className="flex gap-4 overflow-hidden"
+            className="flex gap-4"
             animate={controls}
             drag="x"
             dragConstraints={{ left: -itemWidth * maxIndex, right: 0 }}
@@ -93,11 +86,11 @@ export default function PortfolioSection() {
             {projects.map((project) => (
               <motion.div
                 key={project.id}
-                className="bg-white rounded-md overflow-hidden shadow-sm flex-shrink-0"
+                className="bg-white rounded-md overflow-hidden shadow-sm flex-shrink-0 hover:shadow-lg transition-shadow duration-300"
                 style={{ width: itemWidth }}
               >
                 <div className="relative h-[180px] md:h-[200px] overflow-hidden">
-                  <Image src={project.image || "/placeholder.svg"} alt={project.title} fill className="object-cover" />
+                  <Image src={project.image || "/placeholder.svg"} alt="Class Image" fill className="object-cover" />
                 </div>
               </motion.div>
             ))}
@@ -105,40 +98,18 @@ export default function PortfolioSection() {
 
           <div className="flex justify-center mt-4">
             {Array.from({ length: maxIndex + 1 }).map((_, index) => (
-              <div
+              <button
                 key={index}
                 className={`w-2 h-2 mx-1 rounded-full transition-all duration-300 ${
                   currentIndex === index ? "bg-[#33c6f2] scale-110" : "bg-gray-300"
                 }`}
+                onClick={() => handleDotClick(index)}
+                aria-label={`Go to slide ${index + 1}`}
               />
             ))}
           </div>
-        </div>
-
-        <div className="flex justify-center mt-4">
-          <button
-            className={`mx-2 bg-white rounded-full p-2 shadow-md ${
-              currentIndex === 0 ? "opacity-50 cursor-not-allowed" : ""
-            }`}
-            aria-label="Previous projects"
-            onClick={handlePrev}
-            disabled={currentIndex === 0}
-          >
-            <ChevronLeft className="h-4 w-4 text-[#33c6f2]" />
-          </button>
-          <button
-            className={`mx-2 bg-white rounded-full p-2 shadow-md ${
-              currentIndex === maxIndex ? "opacity-50 cursor-not-allowed" : ""
-            }`}
-            aria-label="Next projects"
-            onClick={handleNext}
-            disabled={currentIndex === maxIndex}
-          >
-            <ChevronRight className="h-4 w-4 text-[#33c6f2]" />
-          </button>
         </div>
       </div>
     </section>
   )
 }
-
