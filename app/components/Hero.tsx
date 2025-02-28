@@ -21,7 +21,7 @@ export default function ProcessSection() {
 
   return (
     <section className="bg-white py-8">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-14 md:px-4 mt-24 md:mt-4">
         <div className="grid md:grid-cols-2 gap-8 items-center">
           {/* Process Steps */}
           <div className="space-y-6">
@@ -46,7 +46,7 @@ export default function ProcessSection() {
             >
               <Link
                 href={"/Pages/enroll"}
-                className="bg-[#33c6f2] text-white px-4 py-2 rounded-full inline-block transition-transform hover:scale-110 hover:translate-y-1"
+                className="bg-[#33c6f2] text-white  px-4 py-2 rounded-full inline-block transition-transform hover:scale-110 hover:translate-y-1"
               >
                 Apply Now
               </Link>

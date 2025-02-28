@@ -9,7 +9,7 @@ export default function AboutPage() {
   return (
     <div className="flex flex-col min-h-screen bg-gray-100 ">
       {/* Hero Section */}
-      <section className="relative py-12 md:py-24 lg:py-32  text-[#33c6f2] overflow-hidden w-11/12 mx-auto mt-8">
+      <section className="relative py-12 md:py-24 lg:py-32  text-[#33c6f2] overflow-hidden w-11/12 mx-auto mt-20 md:mt-8">
         <div className="absolute inset-0 opacity-20">
           <div className="absolute top-0 left-0 w-full h-full bg-[url('/placeholder.svg?height=800&width=1600')] bg-no-repeat bg-cover"></div>
         </div>

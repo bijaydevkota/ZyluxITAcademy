@@ -45,8 +45,8 @@ const Footer = () => {
     },
   ]
   return (
-    <footer id="footer" className="bg-gray-100 text-[#33c6f2] py-8">
-      <div className="container mx-auto px-6">
+    <footer id="footer" className="bg-gray-100 text-[#33c6f2] py-8 ">
+      <div className="container px-6 w-10/12 mx-auto">
         <div className="flex flex-wrap justify-between items-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
