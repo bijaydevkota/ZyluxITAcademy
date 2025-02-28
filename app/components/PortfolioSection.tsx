@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { ChevronLeft, ChevronRight, Presentation } from "lucide-react";
 import { motion, useAnimation } from "framer-motion";
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 
 export default function PortfolioSection() {
   const projects = [
