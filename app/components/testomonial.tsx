@@ -7,7 +7,7 @@ const testimonials = [
   { name: "Bijay Devkota", feedback: "Zylux IT Academy transformed my career. The MERN stack course was in-depth and practical!", image: "/images/john.jpg" },
   { name: "Nilex Karna", feedback: "Amazing instructors and well-structured content. Highly recommend!", image: "/images/jane.jpg" },
   { name: "Prabin Joshi", feedback: "From beginner to pro in just months! The hands-on projects helped a lot.", image: "/images/alex.jpg" },
-  { name: "Grishma Khatiwada", feedback: "I landed my first job thanks to Zylux IT Academy's expert training!", image: "/images/emily.jpg" },
+  { name: "Grishma Khatiwada", feedback: "I landed my first job thanks to Zylux IT Academy&apos;s expert training!", image: "/images/emily.jpg" },
   { name: "Yangma Lama", feedback: "Great learning experience with real-world projects! Highly recommended.", image: "/images/michael.jpg" },
   { name: "Sarita Sharma", feedback: "Great learning experience with real-world projects! Highly recommended.", image: "/images/michael.jpg" },
   { name: "Paras Subedi", feedback: "Great learning experience with real-world projects! Highly recommended.", image: "/images/michael.jpg" },
@@ -61,7 +61,7 @@ export default function TestimonialSection() {
                     alt={testimonial.name}
                     className="w-20 h-20 rounded-full mb-4 border-4 border-white"
                   />
-                  <p className="text-lg italic">"{testimonial.feedback}"</p>
+                  <p className="text-lg italic">&quot;{testimonial.feedback}&quot;</p>
                   <h4 className="text-xl font-semibold mt-4">- {testimonial.name}</h4>
                 </CardContent>
               </Card>
