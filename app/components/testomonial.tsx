@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Card, CardContent } from "@/components/ui/card";
+import Image from "next/image";
 
 const testimonials = [
   { name: "Bijay Devkota", feedback: "Zylux IT Academy transformed my career. The MERN stack course was in-depth and practical!", image: "/images/john.jpg" },
@@ -55,7 +56,7 @@ export default function TestimonialSection() {
             {testimonials.slice(index, index + visibleCount).map((testimonial, i) => (
               <Card key={i} className="bg-[#33c6f2] text-white p-6 rounded-2xl shadow-lg w-full sm:w-1/2 lg:w-1/3">
                 <CardContent className="flex flex-col items-center text-center">
-                  <img
+                  <Image
                     src={testimonial.image}
                     alt={testimonial.name}
                     className="w-20 h-20 rounded-full mb-4 border-4 border-white"
