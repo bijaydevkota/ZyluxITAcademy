@@ -46,17 +46,17 @@ export default function BackendCoursePage() {
   ]
 
   return (
-    <div className="min-h-screen py-12 px-4 sm:px-6 lg:px-8 bg-black text-white">
+    <div className="min-h-screen py-12 px-4 sm:px-6 lg:px-8 bg-white">
       <div className="max-w-7xl mx-auto">
         <h1 className="text-4xl font-bold text-center mb-12 mt-24">
           Backend Development <span className="text-[#33c6f2]">Mastery Course</span>
         </h1>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {sections.map((section, index) => (
-            <div key={index} className="hover:shadow-lg bg-gray-500 p-4 rounded-md transition-shadow duration-300">
+            <div key={index} className="hover:shadow-lg bg-[#33c6f2] text-white p-4 rounded-md transition-shadow duration-300">
               <div>
                 <div className="font-semibold text-xl">{section.title}</div>
-                <div className="opacity-50">{section.description}</div>
+                <div className="opacity-70">{section.description}</div>
               </div>
               <div>
                 <ul className="space-y-2 mt-2">
@@ -72,7 +72,7 @@ export default function BackendCoursePage() {
           ))}
         </div>
         <div className="mt-12 text-center">
-          <Link href={"/Pages/enroll"} className="bg-[#33c6f2] px-6 py-4 rounded-md">Enroll Now</Link>
+          <Link href={"/Pages/enroll"} className="bg-[#33c6f2] text-white px-6 py-4 rounded-md">Enroll Now</Link>
         </div>
       </div>
     </div>

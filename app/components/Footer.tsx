@@ -12,7 +12,7 @@ const Footer = () => {
     },
     {
       links : "Courses",
-      href : "#course"
+      href : "/Pages/courses"
     },
     {
       links : "About",

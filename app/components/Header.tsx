@@ -16,12 +16,12 @@ export default function Header() {
         <div className="container mx-auto px-4 flex items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2">
-            <Image src="/logo.png" alt="Logo" height={50} width={50} />
+            <Image src="/logo.png" alt="Logo" height={70} width={70} />
           </Link>
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden text-[#33c6f2] focus:outline-none"
+            className="md:hidden text-[#33c6f2] focus:outline-none "
             onClick={() => setMenuOpen(!menuOpen)}
           >
             {menuOpen ? <X size={28} /> : <Menu size={28} />}

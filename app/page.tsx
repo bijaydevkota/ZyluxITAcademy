@@ -22,8 +22,8 @@ export default function Home() {
       <AccordionDemo/>
       <Testomonial/>
       <ContactForm/>
-      <Footer />  
-      <CallToAction />
+      
+      
     </main>
   )
 }

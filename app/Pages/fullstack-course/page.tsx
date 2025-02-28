@@ -54,17 +54,17 @@ export default function FullStackCoursePage() {
   ]
 
   return (
-    <div className="min-h-screen py-12 px-4 sm:px-6 lg:px-8 bg-black text-white">
+    <div className="min-h-screen py-12 px-4 sm:px-6 lg:px-8 bg-white text-white">
       <div className="max-w-7xl mx-auto">
-        <h1 className="text-4xl font-bold text-center mb-12 mt-24">
+        <h1 className="text-4xl font-bold text-center mb-12 mt-24 text-black">
           Full-Stack Development <span className="text-[#33c6f2]">Mastery Course</span>
         </h1>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {sections.map((section, index) => (
-            <div key={index} className="hover:shadow-lg bg-gray-500 p-4 rounded-md transition-shadow duration-300">
+            <div key={index} className="hover:shadow-lg bg-[#33c6f2] p-4 rounded-md transition-shadow duration-300">
               <div>
                 <div className="font-semibold text-xl">{section.title}</div>
-                <div className="opacity-50">{section.description}</div>
+                <div className="opacity-70">{section.description}</div>
               </div>
               <div>
                 <ul className="space-y-2 mt-2">

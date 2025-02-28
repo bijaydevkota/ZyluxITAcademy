@@ -3,7 +3,7 @@
 export default function Contact() {
   return (
     <div className="bg-gray-100 text-[#33c6f2] md:px-0 px-4  md:py-36 py-28 flex justify-center items-center ">
-      <main className=" flex flex-col gap-10 md:w-10/12 w-full  shadow-2xl p-4">
+      <main className=" flex flex-col gap-10 md:w-10/12 w-full mt-8 md:mt-16 shadow-2xl p-4">
         <div className=" flex flex-col justify-center">
           <div className="md:max-w-4xl space-y-6 mt-4">
             <h3 className="  text-black md:text-2xl text-xl font-semibold font-serif cursor-pointer">
@@ -42,6 +42,7 @@ export default function Contact() {
         <iframe className="w-full" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3532.9163511295114!2d85.34222027492238!3d27.68898012630232!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb1b3561500f19%3A0xc3658be0c60067d!2sZylux%20IT%20Solution%20%7C%20Software%20Development%20Company!5e0!3m2!1sen!2snp!4v1740388917617!5m2!1sen!2snp" width="600" height="450" loading="lazy"></iframe>
         </div>
       </main>
+      
     </div>
   );
 }

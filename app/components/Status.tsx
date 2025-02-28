@@ -11,8 +11,8 @@ const stats = [
 
 export default function Status() {
   return (
-    <section className="w-full py-12 md:py-24 bg-gray-50 border border-gray-200">
-      <div className="container px-4 md:px-6">
+    <section className="w-full mx-auto py-12 md:py-24 bg-gray-50 border border-gray-200">
+      <div className="container px-4 md:px-6 w-full mx-auto">
         <motion.div
           className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center"
           initial={{ opacity: 0, y: 50 }}
