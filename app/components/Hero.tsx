@@ -21,7 +21,7 @@ export default function ProcessSection() {
 
   return (
     <section className="bg-white py-8">
-      <div className="container mx-auto px-14 md:px-4 mt-24 md:mt-4">
+      <div className="container mx-auto px-14 md:px-4 mt-28 md:mt-4">
         <div className="grid md:grid-cols-2 gap-8 items-center">
           {/* Process Steps */}
           <div className="space-y-6">

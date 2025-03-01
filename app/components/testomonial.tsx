@@ -4,13 +4,13 @@ import { Card, CardContent } from "@/components/ui/card";
 import Image from "next/image";
 
 const testimonials = [
-  { name: "Bijay Devkota", feedback: "Zylux IT Academy transformed my career. The MERN stack course was in-depth and practical!", image: "/images/john.jpg" },
-  { name: "Nilex Karna", feedback: "Amazing instructors and well-structured content. Highly recommend!", image: "/images/jane.jpg" },
-  { name: "Prabin Joshi", feedback: "From beginner to pro in just months! The hands-on projects helped a lot.", image: "/images/alex.jpg" },
-  { name: "Grishma Khatiwada", feedback: "I landed my first job thanks to Zylux IT Academy&apos;s expert training!", image: "/images/emily.jpg" },
-  { name: "Yangma Lama", feedback: "Great learning experience with real-world projects! Highly recommended.", image: "/images/michael.jpg" },
-  { name: "Sarita Sharma", feedback: "Great learning experience with real-world projects! Highly recommended.", image: "/images/michael.jpg" },
-  { name: "Paras Subedi", feedback: "Great learning experience with real-world projects! Highly recommended.", image: "/images/michael.jpg" },
+  { name: "Bijay Devkota", feedback: "Zylux IT Academy transformed my career. The MERN stack course was in-depth and practical!", image: "/hero.png" },
+  { name: "Nilex Karna", feedback: "Amazing instructors and well-structured content. Highly recommend!", image: "/hero.png" },
+  { name: "Prabin Joshi", feedback: "From beginner to pro in just months! The hands-on projects helped a lot.", image: "/hero.png" },
+  { name: "Grishma Khatiwada", feedback: "I landed my first job thanks to Zylux IT Academy&apos;s expert training!", image: "/hero.png" },
+  { name: "Yangma Lama", feedback: "Amazing instructors and well-structured content. Highly recommend!", image: "/hero.png" },
+  { name: "Sarita Sharma", feedback: "Great learning experience with real-world projects! Highly recommended.", image: "/hero.png" },
+  { name: "Paras Subedi", feedback: "Zylux IT Academy transformed my career. The MERN stack course was in-depth and practical!", image: "/hero.png" },
 ];
 
 export default function TestimonialSection() {
@@ -57,6 +57,8 @@ export default function TestimonialSection() {
               <Card key={i} className="bg-[#33c6f2] text-white p-6 rounded-2xl shadow-lg w-full sm:w-1/2 lg:w-1/3">
                 <CardContent className="flex flex-col items-center text-center">
                   <Image
+                    height={16}
+                    width={16}
                     src={testimonial.image}
                     alt={testimonial.name}
                     className="w-20 h-20 rounded-full mb-4 border-4 border-white"
