@@ -8,10 +8,10 @@ import { useRef, useState, useEffect } from "react"
 export default function PortfolioSection() {
   const projects = [
     { id: 1, image: "/class1.jpg" },
-    { id: 2, image: "/class1.jpg" },
-    { id: 3, image: "/class1.jpg" },
+    { id: 2, image: "/class5.jpg" },
+    { id: 3, image: "/class3.jpg" },
     { id: 4, image: "/class2.jpg" },
-    { id: 5, image: "/class3.jpg" },
+    { id: 5, image: "/class1.jpg" },
     { id: 6, image: "/class1.jpg" },
     { id: 7, image: "/class2.jpg" },
     { id: 8, image: "/class2.jpg" },
