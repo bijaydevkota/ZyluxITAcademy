@@ -4,7 +4,7 @@ import Link from "next/link"
 
 const CallToAction = () => {
   return (
-    <section className="py-20 bg-[#33c6f2] text-white">
+    <section className="py-20 bg-[#33c6f2] text-white relative">
       <div className="container mx-auto px-6 text-center">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
@@ -23,18 +23,22 @@ const CallToAction = () => {
           Join Zylux IT Academy today and transform your career in technology.
         </motion.p>
         <Link href={"/Pages/enroll"}>
-        <motion.button
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-          className="bg-white text-[#33c6f2] px-8 py-3 rounded-full text-lg font-semibold transition-colors"
-        >
-          Enroll Now
-        </motion.button>
+          <motion.button
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            className="bg-white text-[#33c6f2] px-8 py-3 rounded-full text-lg font-semibold transition-colors"
+          >
+            Enroll Now
+          </motion.button>
         </Link>
       </div>
+      
+      {/* Bottom-right positioned text */}
+      <p className="absolute bottom-4 right-6 text-sm">
+        Designed and Developed By <a href="https://www.zyluxitsolution.com/" target="_blank" className="underline">Zylux IT Solution</a>
+      </p>
     </section>
   )
 }
 
 export default CallToAction
-
