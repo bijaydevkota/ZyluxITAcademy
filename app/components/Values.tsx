@@ -1,5 +1,5 @@
 import React from 'react'
-import { Card, CardContent } from "@/components/ui/card"
+import { Card, CardContent } from "@/app/components/ui/card"
 import { CheckCircle, Lightbulb, Users } from 'lucide-react'
 export default function Values() {
   return (

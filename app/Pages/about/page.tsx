@@ -1,6 +1,6 @@
 
 
-import { Badge } from "@/components/ui/badge"
+import { Badge } from "@/app/components/ui/badge"
 import {  ArrowRight } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
